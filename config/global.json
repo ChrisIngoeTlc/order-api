@@ -1,0 +1,25 @@
+{
+  "Server" : {
+    "Port"           : 8082,
+    "Name"           : "order-api",
+    "DefaultVersion" : "1.0.0",
+    "Acceptable"     : [ "application/json" ],
+    "ThrottleRate"   : 50,
+    "ThrottleBurst"  : 100
+  },
+  "ServerLogging" : {
+    "Name"        : "ServerLogging",
+    "Dir"         : "./logs/",
+    "File"        : "order-api-server.log"
+  },
+  "ApplicationLogging" : {
+    "Name"        : "ApplicationLogging",
+    "Dir"         : "./logs/",
+    "File"        : "order-api.log",
+    "Level"       : "debug"
+  },
+  "Data" : {
+      "ConnectionString"        : "Driver={SQL Server Native Client 11.0};Server=[SERVER];Database=[DATABASE];UID=[USER];PWD=[PASSWORD]",
+      "NewOrderNumberSp"        : "[SP]"
+  }
+}
